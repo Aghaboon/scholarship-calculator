@@ -14,9 +14,9 @@ export default function CalculationForm() {
     const [errorMessage, setErrorMessage] = useState("");
 
     const calculateWeightedScore = () => {
-        const hs = parseFloat(highSchoolScore);
-        const apt = parseFloat(aptitudeTestScore);
-        const ach = parseFloat(achievementTestScore);
+        const hs = parseFloat(highSchoolScore); // ثانوية عامة
+        const apt = parseFloat(aptitudeTestScore); // قدرات
+        const ach = parseFloat(achievementTestScore); // تحصيلي
 
         if (
             [hs, apt, ach].some(
@@ -29,7 +29,7 @@ export default function CalculationForm() {
             return;
         }
 
-        const finalScore = +(hs * 0.4 + apt * 0.3 + ach * 0.3).toFixed(2);
+        const finalScore = +(hs * 0.3 + apt * 0.3 + ach * 0.4).toFixed(2);
         setWeightedScore(finalScore);
         setErrorMessage("");
 

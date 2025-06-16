@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ScholarshipTable from "../../components/ScholarshipTable";
 import CalculationForm from "../../components/CalculationForm";
+import Footer from "../../components/footer";
 
 
 
@@ -32,9 +33,9 @@ export default function Page() {
           <div>
             <h2 className="text-xl md:text-2xl font-bold text-blue-700 mb-3">شروط حساب المعدل:</h2>
             <ul className="list-disc list-inside space-y-1 text-gray-700">
-              <li>40٪ من نسبة الثانوية العامة</li>
+              <li>30٪ من نسبة الثانوية العامة</li>
               <li>30٪ من درجة اختبار القدرات</li>
-              <li>30٪ من درجة اختبار التحصيلي</li>
+              <li>40٪ من درجة اختبار التحصيلي</li>
             </ul>
           </div>
 
@@ -46,6 +47,7 @@ export default function Page() {
         {/* نموذج الإدخال والحساب */}
         <CalculationForm />
       </div>
+      <Footer />
     </div>
   );
 }
