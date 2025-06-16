@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 حاسبة النسبة الموزونة والمنح - جامعة الأمير مقرن
 
-## Getting Started
+موقع بسيط ورايق يساعد الطلاب في حساب النسبة الموزونة (ثانوية + قدرات + تحصيلي) ومعرفة نوع المنحة بناءً على المعدل.
 
-First, run the development server:
+## 📊 طريقة الحساب:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **40٪** من نسبة الثانوية العامة
+- **30٪** من درجة اختبار القدرات
+- **30٪** من درجة اختبار التحصيلي
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎁 شروط المنح:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| النسبة الموزونة | نوع المنحة           |
+|-----------------|----------------------|
+| 97٪ فأعلى       | منحة كاملة (100٪)    |
+| 94٪ فأعلى       | منحة 80٪             |
+| 90٪ فأعلى       | منحة 60٪             |
+| 80٪ فأعلى       | منحة 50٪             |
+| أقل من 80٪      | لا توجد منحة         |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ التقنية المستخدمة
 
-## Learn More
+- [Next.js](https://nextjs.org/) — إطار عمل React للواجهات
+- [Tailwind CSS](https://tailwindcss.com/) — تنسيق سريع ومرن
+- [TypeScript](https://www.typescriptlang.org/) — لكتابة كود آمن ومنظم
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 متجاوب مع جميع الشاشات
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✔️ الجوال  
+✔️ التابلت  
+✔️ سطح المكتب
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 تجربة المشروع
 
-## Deploy on Vercel
+يمكنك زيارة الموقع بعد نشره عبر Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
