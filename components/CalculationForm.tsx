@@ -37,6 +37,7 @@ export default function CalculationForm() {
         else if (finalScore >= 94) setScholarshipType("🎓 منحة 80٪");
         else if (finalScore >= 90) setScholarshipType("🎓 منحة 60٪");
         else if (finalScore >= 80) setScholarshipType("🎓 منحة 50٪");
+        else if (finalScore < 80) setScholarshipType("🎓 منحة 30٪");
         else setScholarshipType("❌ لا توجد منحة");
     };
 

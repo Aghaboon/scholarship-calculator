@@ -18,7 +18,7 @@ export default function ScholarshipTable() {
                 ['94٪ فأعلى', 'منحة 80٪'],
                 ['90٪ فأعلى', 'منحة 60٪'],
                 ['80٪ فأعلى', 'منحة 50٪'],
-                ['أقل من 80٪', 'لا توجد منحة'],
+                ['أقل من 80٪', 'منحة 30٪'],
               ].map(([range, type], idx) => (
                 <tr key={idx} className={idx % 2 ? 'bg-gray-50' : ''}>
                   <td className="border px-2 py-1">{range}</td>
