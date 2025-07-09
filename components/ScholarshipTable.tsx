@@ -1,34 +1,33 @@
 "use client";
 
 export default function ScholarshipTable() {
-    return (
-      <div className="bg-white shadow-md rounded-lg p-4 max-w-xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-semibold text-blue-700 mb-2">شروط المنح:</h2>
-        <div className="overflow-x-auto">
-          <table className="w-full max-w-full text-center border border-gray-300 rounded-md text-sm">
-            <thead className="bg-blue-50 text-blue-900">
-              <tr>
-                <th className="border px-2 py-1">النسبة الموزونة</th>
-                <th className="border px-2 py-1">نوع المنحة</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ['97٪ فأعلى', 'منحة كاملة (100٪)'],
-                ['94٪ فأعلى', 'منحة 80٪'],
-                ['90٪ فأعلى', 'منحة 60٪'],
-                ['80٪ فأعلى', 'منحة 50٪'],
-                ['أقل من 80٪', 'منحة 30٪'],
-              ].map(([range, type], idx) => (
-                <tr key={idx} className={idx % 2 ? 'bg-gray-50' : ''}>
-                  <td className="border px-2 py-1">{range}</td>
-                  <td className="border px-2 py-1">{type}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+  const scholarships = [
+    { range: "97٪ فأعلى", type: "منحة كاملة (100٪)", icon: "🏆" }, // كأس الفوز الكامل
+    { range: "94٪ فأعلى", type: "منحة 80٪", icon: "🎖️" }, // وسام التميز
+    { range: "90٪ فأعلى", type: "منحة 60٪", icon: "🥈" }, // ميدالية فضية
+    { range: "80٪ فأعلى", type: "منحة 50٪", icon: "🥉" }, // ميدالية برونزية
+    { range: "أقل من 80٪", type: "منحة 30٪", icon: "🎓" }, // قبعة التخرج (أساسية)
+  ];
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-blue-800">🎓 أنواع المنح الدراسية:</h2>
+
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+        {scholarships.map((item, idx) => (
+          <div
+            key={idx}
+            className="flex items-center justify-between bg-gradient-to-r from-blue-50 to-white border border-blue-100 rounded-xl shadow-sm px-6 py-4"
+          >
+            <div className="text-lg md:text-xl font-semibold text-blue-900 flex items-center gap-2">
+              <span className="text-2xl">{item.icon}</span> {item.range}
+            </div>
+            <div className="text-base md:text-lg text-gray-700 font-medium">
+              {item.type}
+            </div>
+          </div>
+        ))}
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
